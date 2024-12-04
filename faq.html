@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Часто задавані питання - ТехноСвіт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .question {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .answer {
+            margin-top: 5px;
+            margin-left: 20px;
+            display: none;
+            /* Сховуємо відповіді за замовчуванням */
+        }
+
+        .user,
+        .techno {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-name,
+        .techno-name {
+            font-size: 14px;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .question-form {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-form h2 {
+            margin-top: 0;
+        }
+
+        .question-form input,
+        .question-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .question-form button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .question-form button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Часто задавані питання</h1>
+    </header>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/1.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Олег К.</span>
+            </div>
+            <p class="question">1. Яка політика повернення товарів?</p>
+            <div class="answer">
+                <p>Ви можете повернути товар протягом 14 днів з моменту покупки за умови, що він не був використаний і
+                    зберіг свою первісну упаковку.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/2.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Марія П.</span>
+            </div>
+            <p class="question">2. Які методи оплати ви приймаєте?</p>
+            <div class="answer">
+                <p>Ми приймаємо оплату картами Visa, MasterCard, а також через PayPal.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/3.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Іван С.</span>
+            </div>
+            <p class="question">3. Чи є у вас програма лояльності?</p>
+            <div class="answer">
+                <p>Так, ми пропонуємо програму лояльності, де ви можете накопичувати бали за покупки і обмінювати їх на
+                    знижки.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/4.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Анна М.</span>
+            </div>
+            <p class="question">4. Як я можу відстежувати своє замовлення?</p>
+            <div class="answer">
+                <p>Після відправлення замовлення ви отримаєте електронний лист з номером для відстеження, за яким ви
+                    зможете слідкувати за статусом доставки.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/5.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Сергій Л.</span>
+            </div>
+            <p class="question">5. Чи можу я змінити своє замовлення після оформлення?</p>
+            <div class="answer">
+                <p>Так, ви можете змінити своє замовлення протягом 30 хвилин після оформлення. Для цього зв'яжіться з
+                    нашою службою підтримки.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="user">
+                <img src="./img/persons/6.jpg" alt="Аватар користувача" class="avatar">
+                <span class="user-name">Олена Т.</span>
+            </div>
+            <p class="question">6. Які гарантії ви надаєте на ваші товари?</p>
+            <div class="answer">
+                <p>Ми надаємо гарантію на всі наші товари терміном на 12 місяців з моменту покупки, за умови дотримання
+                    правил експлуатації.</p>
+                <div class="techno">
+                    <img src="./img/logo/logo_TechnoWorld.png" alt="Аватар ТехноСвіт" class="avatar">
+                    <span class="techno-name">ТехноСвіт</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Додаємо обробник події для кожного елемента FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.answer');
+                // Перемикаємо видимість відповіді
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <div class="question-form">
+        <h2>Задати питання</h2>
+        <form id="questionForm">
+            <input type="text" id="questionerName" placeholder="Ваше ім'я" required>
+            <input type="email" id="questionerEmail" placeholder="Ваш email" required>
+            <textarea id="questionText" rows="4" placeholder="Ваше питання" required></textarea>
+            <button type="submit">Відправити питання</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ТехноСвіт. Всі права захищені.</p>
+        <p><a href="reviews.html">Відгуки</a> | <a href="index.html">Головна</a></p>
+    </footer>
+</body>
+
+</html>

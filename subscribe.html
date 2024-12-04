@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Підписатися на новини - ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0e5ff, #e0c3fc, #f9d4d4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .body-background::before,
+        .body-background::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .body-background::before {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 20%;
+            left: 10%;
+            filter: blur(50px);
+        }
+
+        .body-background::after {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 200, 200, 0.3);
+            bottom: 10%;
+            right: 20%;
+            filter: blur(50px);
+        }
+
+        .subscribe-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .email-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        .email-input:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        .subscribe-button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+
+        .subscribe-button:hover {
+            background-color: #3498db;
+            transform: translateY(-2px);
+        }
+
+        .subscribe-button:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #777;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-media a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="subscribe-container">
+        <h1>Підписатися на новини</h1>
+        <p>Будьте в курсі останніх новин та акцій. Введіть свою електронну адресу, щоб підписатися!</p>
+        <input type="email" class="email-input" placeholder="Ваш email" required>
+        <button class="subscribe-button" onclick="subscribe()">Підписатися</button>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+        <div class="social-media">
+            <a href="https://t.me/ukrainian_dev" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/ukr.developer" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@BrimTECH1" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Функція для підписки на новини
+        function subscribe() {
+            const emailInput = document.querySelector('.email-input');
+            const email = emailInput.value;
+
+            if (email) {
+                fetch('http://127.0.0.1:5500/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert(`Дякуємо за підписку, ${email}!`);
+                            emailInput.value = '';
+                        } else {
+                            alert('Виникла помилка, спробуйте ще раз!');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Ошибка:', error);
+                        alert('Виникла помилка, спробуйте ще раз!');
+                    });
+            } else {
+                alert('Введіть свою реальну електронну адресу!');
+            }
+        }
+    </script>
+</body>
+
+</html>

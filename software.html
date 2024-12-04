@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <h1>Інтернет-магазин</h1>
+        <h2>ТехноСвіт</h2>
+        <nav>
+            <ul>
+                <div class="Logo">
+                    <a href="index2.html"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                </div>
+                <li><a href="index2.html">Продукти</a></li>
+                <li><a href="contact-page.html">Контакти</a></li>
+                <li><a href="#" id="cart-link">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body-2>
+        <div class="container-soft">
+            <img src="./system_photos/Antiviruses/antivirus-1.webp" alt="Програмні забезпечення"
+                id="software-programs" class="container-soft2">
+            <h3>Антивіруси</h3>
+            <a href="antivirus.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/IT-programs/autodesk_3ds_max_commercial_single-user_annual_subscription_renewal_128f1-001355-l890~400~400.webp"
+                alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+            <h3>IT-програми</h3>
+            <a href="it.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/Office-programs/Logo.webp" alt="Програмні забезпечення" id="software-programs"
+                class="container-soft2">
+            <h3>Офісні програми</h3>
+            <a href="office.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/OSes/Символ-операц-систем.webp" alt="Програмні забезпечення"
+                id="software-programs" class="container-soft2">
+            <h3>Операційні системи</h3>
+            <a href="os.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/Security-ps-for-system/hikvision_hikcentral-p-acs-1door~438~450.webp"
+                alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+            <h3>ПЗ для систем безпеки</h3>
+            <a href="system-of-sec.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/Server-PS/i~1338~1600.webp" alt="Програмні забезпечення"
+                id="software-programs" class="container-soft2">
+            <h3>Серверне ПЗ</h3>
+            <a href="server.html"><button id="software-button">Переглянути</button></a>
+
+            <img src="./system_photos/System-programs/Logo.webp" alt="Програмні забезпечення" id="software-programs"
+                class="container-soft2">
+            <h3>Системні програми</h3>
+            <a href="last.html"><button id="software-button">Переглянути</button></a>
+        </div>
+    </body-2>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Оформити замовлення</button>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1><span class="cyan">ТехноСвіт</span></h1>
+                <p>Ваш надійний партнер у світі технологій.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="about-us.html">Про нас</a></li>
+                    <li><a href="privacy-policy.html">Політика конфіденційності</a></li>
+                    <li><a href="terms-of-service.html">Умови використання</a></li>
+                    <li><a href="return-policy.html">Політика повернення</a></li>
+                    <li><a href="faq.html">Часто задавані питання</a></li>
+                    <li><a href="reviews.html">Відгуки</a></li>
+                </ul>
+            </div>
+            <div class="footer-delivery">
+                <h3>Доставка</h3>
+                <ul>
+                    <li>Самовивіз - безкоштовно</li>
+                    <li>Нова Пошта - (По тарифам перевізника)</li>
+                    <li>Укрпошта - (По тарифам перевізника)</li>
+                    <li>Кур'єр ТехноСвіт - 500 гривень</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Ел. пошта: <a href="mailto:denispahomov01@gmail.com">denispahomov01@gmail.com</a></p>
+                <p>Телефон: <span>+38 (099) 683-08-40</span></p>
+                <div class="working-hours">
+                    <b>Години роботи:</b>
+                    <ul>
+                        <li>Пн - Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 16:00</li>
+                        <li>Нд: Вихідний</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Підписатися на новини</h3>
+                <a href="./subscribe.html"><button class="subscribe-button">Підписатися</button></a>
+            </div>
+
+            <style>
+                .footer-newsletter {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+
+                .subscribe-button {
+                    padding: 15px 30px;
+                    font-size: 16px;
+                    background-color: #2980b9;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.3s;
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                .subscribe-button:hover {
+                    background-color: #3498db;
+                    transform: translateY(-2px);
+                }
+
+                .subscribe-button:active {
+                    transform: translateY(0);
+                }
+
+                .social-media img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                }
+            </style>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <h3>Слідкуйте за нами</h3>
+                <a href="https://t.me/ukrainian_dev"><img src="./img/Our-channels/telegram.svg" alt="Telegram"></a>
+                <a href="https://www.instagram.com/ukr.developer"><img src="./img/Our-channels/instagramm.svg"
+                        alt="Instagram"></a>
+                <a href="https://www.youtube.com/@BrimTECH1"><img src="./img/Our-channels/youtube.svg"
+                        alt="YouTube"></a>
+            </div>
+            <div class="payment-methods">
+                <h3>Методи оплати</h3>
+                <img src="./img/payment/visa.png" alt="Visa">
+                <img src="./img/payment/mastercard.png" alt="MasterCard">
+                <img src="./img/payment/paypal.png" alt="PayPal">
+            </div>
+            <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

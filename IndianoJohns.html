@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тепло Поруч - Акція на електроковдри та електрогрілки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .promo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .promo img {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .promo-text {
+            margin-bottom: 20px;
+        }
+
+        .promo-text h1 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin: 0;
+        }
+
+        .promo-text p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details p {
+            margin: 5px 0;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .countdown div {
+            background-color: #ffcc00;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Пригоди кличуть</div>
+        <div class="promo">
+            <img src="./img/slider/9.webp" alt="Електроковдра та електрогрілка">
+            <div class="promo-text">
+                <h1>Пригоди кличуть</h1>
+                <p>Купуй акційні відеокарти <a
+                        href="https://marketplace.nvidia.com/en-us/consumer/graphics-cards/">Nvidia GeForce RTX 40 </a>
+                    і отримуй код активації гри "Indiana Jones and the
+                    Great Circle" у подарунок!
+                </p>
+            </div>
+        </div>
+        <div class="details">
+            <p>До завершення акції залишилось:</p>
+            <div class="countdown" id="countdown">
+                <div><span id="days">27</span> днів</div>
+                <div><span id="hours">09</span> годин</div>
+                <div><span id="minutes">33</span> хвилин</div>
+                <div><span id="seconds">59</span> секунд</div>
+            </div>
+            <p>Акція дійсна до: <strong>31 грудня 2024</strong></p>
+        </div>
+    </div>
+    <script>
+        const countdownElement = document.getElementById("countdown");
+        const daysElement = document.getElementById("days");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+        const targetDate = new Date("December 31, 2024 23:59:59").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            daysElement.textContent = days;
+            hoursElement.textContent = hours;
+            minutesElement.textContent = minutes;
+            secondsElement.textContent = seconds;
+
+            if (difference < 0) {
+                clearInterval(interval);
+                countdownElement.innerHTML = "Акція завершена";
+            }
+        }
+
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>

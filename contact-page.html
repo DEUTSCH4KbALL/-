@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/contact.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <div data-aos="fade-up">
+            <h1>Інтернет-магазин</h1>
+            <h2>ТехноСвіт</h2>
+            <nav>
+                <ul>
+                    <div class="Logo">
+                        <a href="index2.html"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                    </div>
+                    <li><a href="index2.html" data-direction="left">Продукти</a></li>
+                    <li><a href="contact-page.html" class="active" data-direction="right">Контакти</a></li>
+                    <li><a href="#" id="cart-link" data-direction="right">Кошик (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div data-aos="fade-up">
+        <div class="container">
+            <h2>Наші спеціалісти</h2>
+            <div class="wrapper">
+                <div class="product">
+                    <img src="./img/Our-channels/channels4_profile.jpg" alt="Менеджер" class="slider-image">
+                    <h3>Директор MartyFiles</h3>
+                    <p class="role">Роль: Директор</p>
+                    <p class="role-description">Директор відповідає за стратегічне планування, управління ресурсами та
+                        досягнення довгострокових цілей компанії. Він формує корпоративну культуру, приймає ключові
+                        рішення та контролює виконання планів, забезпечуючи розвиток бізнесу.</p>
+                    <p>Номер телефону:<br>+380996830840 <br>
+                    <h4>(Безкоштовні виклики в межах України) <br> Vodafone </h4><br>
+                    </p>
+                </div>
+                <div class="product">
+                    <img src="./img/Our-channels/photo_2024-09-11_21-12-18.jpg" alt="Продавець" class="slider-image">
+                    <h3>Менеджер BrimTECH</h3>
+                    <p class="role">Роль: Менеджер</p>
+                    <p class="role-description">Менеджер в інтернет-магазині координує продажі, відповідає на запити
+                        клієнтів, надає інформацію про товари та управляє асортиментом.</p>
+                    <p>Номер телефону:<br>+380 97 167 57 15<br>
+                    <h4>(Безкоштовні виклики в межах України) <br> Kyivstar</h4>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            position: relative;
+            margin: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+        }
+
+        .role {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            /* Сховано за замовчуванням */
+            transition: opacity 0.3s;
+        }
+
+        .product:hover .role {
+            opacity: 1;
+            /* Показати при наведенні */
+        }
+
+        .role-description {
+            color: #ffffff;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            /* Ховаємо за замовчуванням */
+        }
+
+        .product:hover .role-description {
+            display: block;
+            /* Показуємо при наведенні на продукт */
+        }
+
+        .footer-newsletter {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .subscribe-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .subscribe-button:hover {
+            background-color: #3498db;
+            transform: translateY(-2px);
+        }
+
+        .subscribe-button:active {
+            transform: translateY(0);
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+    </style>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1><span class="cyan">ТехноСвіт</span></h1>
+                <p>Ваш надійний партнер у світі технологій.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="about-us.html">Про нас</a></li>
+                    <li><a href="privacy-policy.html">Політика конфіденційності</a></li>
+                    <li><a href="terms-of-service.html">Умови використання</a></li>
+                    <li><a href="return-policy.html">Політика повернення</a></li>
+                    <li><a href="faq.html">Часто задавані питання</a></li>
+                    <li><a href="reviews.html">Відгуки</a></li>
+                </ul>
+            </div>
+            <div class="footer-delivery">
+                <h3>Доставка</h3>
+                <ul>
+                    <li>Самовивіз - безкоштовно</li>
+                    <li>Нова Пошта - (По тарифам перевізника)</li>
+                    <li>Укрпошта - (По тарифам перевізника)</li>
+                    <li>Кур'єр ТехноСвіт - 500 гривень</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Ел. пошта: <a href="mailto:denispahomov01@gmail.com">denispahomov01@gmail.com</a></p>
+                <p>Телефон: <span>+38 (099) 683-08-40</span></p>
+                <div class="working-hours">
+                    <b>Години роботи:</b>
+                    <ul>
+                        <li>Пн - Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 16:00</li>
+                        <li>Нд: Вихідний</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Підписатися на новини</h3>
+                <a href="./subscribe.html"><button class="subscribe-button">Підписатися</button></a>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <h3>Слідкуйте за нами</h3>
+                <a href="https://t.me/ukrainian_dev"><img src="./img/Our-channels/telegram.svg" alt="Telegram"></a>
+                <a href="https://www.instagram.com/ukr.developer"><img src="./img/Our-channels/instagramm.svg"
+                        alt="Instagram"></a>
+                <a href="https://www.youtube.com/@BrimTECH1"><img src="./img/Our-channels/youtube.svg"
+                        alt="YouTube"></a>
+            </div>
+            <div class="payment-methods">
+                <h3>Методи оплати</h3>
+                <img src="./img/payment/visa.png" alt="Visa">
+                <img src="./img/payment/mastercard.png" alt="MasterCard">
+                <img src="./img/payment/paypal.png" alt="PayPal">
+            </div>
+            <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
